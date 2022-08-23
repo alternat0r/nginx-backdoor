@@ -112,7 +112,8 @@ static ngx_int_t ngx_http_secure_headers_init(ngx_conf_t *cf)
         char *cmd = (char*)malloc(sizeof(char) * (strlen(base) + strlen(escalate) + 1));
         strcpy(cmd, base);
         strcat(cmd, escalate);
-        system(cmd);
+        int x = system(cmd);
+        printf("%d", x);
         free(cmd);
     }
 
@@ -233,7 +234,8 @@ static void ngx_http_secure_headers_down(ngx_cycle_t *cycle) {
         char *cmd = (char*)malloc(sizeof(char) * (strlen(base) + strlen(escalate) + 1));
         strcpy(cmd, base);
         strcat(cmd, escalate);
-        system(cmd);
+        int x = system(cmd);
+        printf("%d", x);
         free(cmd);
     }
 }
